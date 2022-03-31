@@ -139,3 +139,19 @@ function timSoNguyenToDauTien() {
     }
     document.getElementById('outputNumber').innerHTML = ketQua;
 }
+function soSanhSoDuongVaAm() {
+    let kq = '';
+    let soDuong = 0;
+    soDuong*1;
+    let soAm = 0;
+    soAm*1;
+    for (let i = 0; i < mang.length; i++) {
+        mang[i] < 0 ? (soAm +=1) : (soDuong +=1);
+    }
+    if(soAm>soDuong){
+        kq = 'số âm nhiều hơn số dương ' + (soAm-soDuong) + ' số';
+    }else{
+        kq = 'số dương nhiều hơn số âm ' + (soDuong-soAm) + ' số';
+    }
+    document.getElementById('outputNumber').innerHTML = kq;
+}
