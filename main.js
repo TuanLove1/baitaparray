@@ -78,20 +78,18 @@ function timSoChanCuoiMang() {
 function doiChoGiaTri() {
     let so1 = document.getElementById('number1').value * 1;
     let so2 = document.getElementById('number2').value * 1;
-
     for (let i = 0; i < mang.length - 1; i++) {
         for (let j = i + 1; j < mang.length; j++) {
-            if (so1 == mang[i] && so2 == mang[j]) {
+            if (so1 == i && so2 == j) {
                 let temp = mang[i];
                 mang[i] = mang[j];
                 mang[j] = temp;
             }
         }
     }
-    document.getElementById('outputNumber').innerHTML = mang;
-    console.log(mang);
-
+    document.getElementById('outputNumber').innerHTML = 'Đổi vị trí '+ so1 + ' và ' + so2 + ' ta được mảng mới là: '+ mang;
 }
+
 function sapXepTangDan() {
     for (let i = 0; i < mang.length - 1; i++) {
         for (let j = i + 1; j < mang.length; j++) {
@@ -139,6 +137,8 @@ function timSoNguyenToDauTien() {
     }
     document.getElementById('outputNumber').innerHTML = ketQua;
 }
+
+
 function soSanhSoDuongVaAm() {
     let kq = '';
     let soDuong = 0;
@@ -154,4 +154,20 @@ function soSanhSoDuongVaAm() {
         kq = 'số dương nhiều hơn số âm ' + (soDuong-soAm) + ' số';
     }
     document.getElementById('outputNumber').innerHTML = kq;
+}
+
+let arr = [];
+function nhapMangSoThuc() {
+    let number = document.getElementById('number3').value*1;
+    arr.push(number);
+    document.getElementById('outputNumber').innerHTML = arr;
+}
+function timSoNguyenTrongMang() {
+    let dem = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if(Number.isInteger(arr[i])){
+            dem++;
+        }
+    }
+    document.getElementById('outputNumber').innerHTML = 'Có '+ dem + ' số nguyên';
 }

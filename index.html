@@ -1,37 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-      <div class="all">
-        <input id="number" type="text" value="" placeholder="Nhập vào số nguyên">
-        <input id="number1" type="text" value="" placeholder="Nhập vị trí muốn đổi">
-        <input id="number2" type="text" value="" placeholder="Nhập vị trí muốn đổi">
-        <button onclick="nhapMang()" class="btn btn-primary">Nhập số</button><br>
-        <button onclick="tongCacSoDuong()" class="btn btn-primary">Tổng các số dương</button>
-        <button onclick="demSoDuong()" class="btn btn-primary">Đếm số dương</button>
-        <button onclick="timSoMin()" class="btn btn-primary">Tìm số nhỏ nhất</button>
-        <button onclick="timSoMinDuong()" class="btn btn-primary">Tìm số dương nhỏ nhất</button>
-        <button onclick="timSoChanCuoiMang()" class="btn btn-primary">Tìm số chẵn ở cuối</button>
-        <button onclick="doiChoGiaTri()" class="btn btn-primary">Đổi vị trí</button>
-        <button onclick="sapXepTangDan()" class="btn btn-primary">Sắp xếp tăng dần</button>
-        <button onclick="timSoNguyenToDauTien()" class="btn btn-primary">Tìm SNT đầu tiên</button>
-        <button onclick="soSanhSoDuongVaAm()" class="btn btn-primary">So sánh số dương và số âm</button>
-        <div id="outputNumber"></div>
-      </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
-  </body>
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="all">
+    <div class="all__all">
+      <h1>Bài tập luyện mảng</h1>
+      <input id="number" type="text" value="" placeholder="Nhập vào số nguyên">
+      <button onclick="nhapMang()" class="btn btn-primary">Nhập số</button><br>
+      <input id="number1" type="text" value="" placeholder="Nhập vị trí muốn đổi">
+      <input id="number2" type="text" value="" placeholder="Nhập vị trí muốn đổi">
+      <button onclick="doiChoGiaTri()" class="btn btn-danger">Đổi vị trí</button><br>
+    </div>  
+    <div class="all__top">
+      <button onclick="tongCacSoDuong()" class="btn btn-success">Tổng các số dương</button>
+      <button onclick="demSoDuong()" class="btn btn-success">Đếm số dương</button>
+      <button onclick="timSoMin()" class="btn btn-success">Tìm số nhỏ nhất</button>
+      <button onclick="timSoMinDuong()" class="btn btn-success">Tìm số dương nhỏ nhất</button><br>
+    </div>
+    <div class="all__mid">
+      <button onclick="timSoChanCuoiMang()" class="btn btn-success">Tìm số chẵn ở cuối</button>
+      <button onclick="sapXepTangDan()" class="btn btn-success">Sắp xếp tăng dần</button>
+      <button onclick="timSoNguyenToDauTien()" class="btn btn-success">Tìm SNT đầu tiên</button>
+      <button onclick="soSanhSoDuongVaAm()" class="btn btn-success">So sánh số dương và số âm</button>
+    </div>
+    <div class="all__bottom">
+      <input id="number3" type="text" value="" placeholder="Nhập mảng số thực">
+      <button onclick="nhapMangSoThuc()" class="btn btn-primary">Nhập số</button>
+      <button onclick="timSoNguyenTrongMang()" class="btn btn-success">Tìm Số Nguyên</button>
+
+    </div>
+    <div id="outputNumber"></div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+</body>
+
 </html>
